@@ -1,0 +1,59 @@
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.main-navigation .contact {
+    position: absolute;
+    right: 8px;
+    top: 25px;
+}
+
+.main-navigation .contact p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    margin-right: 6px;
+}
+
+.main-navigation .contact .custom-logo-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.main-navigation .contact .custom-logo-link img {
+    width: 52px;
+    height: auto;
+    border: #ffffff solid 4px;
+    border-radius: 50%;
+    margin-top: 6px;
+}
+
+.main-navigation .contact a {
+    color: white;
+    font-weight: 700;
+}
+
+.main-navigation .contact a:focus {
+    outline: none;
+}
+
+@media @midwidth {
+    .main-navigation .contact {
+        position: absolute;
+        top: 36px;
+    }
+}
+
+@media only screen and (min-width: 52em) {
+    .main-navigation .contact {
+        top: -23px;
+    }
+    .main-navigation .contact a {
+        color: @primary-color;
+    }
+    .main-navigation .contact .custom-logo-link img {
+        width: 82px;
+        top: 46px;
+    }
+}

@@ -1,0 +1,176 @@
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+// used for elements inside widget-area;
+// widget-area itself defined in Content and Global
+.widget {
+    margin: 1em 0 0 0;
+    background-color: white;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.widget ul {
+    padding-top: 0;
+}
+
+.widget li {
+    margin-bottom: 0.3em;
+}
+
+.widget a {
+    text-decoration: none;
+}
+
+.widget a:hover {
+    text-decoration: underline;
+}
+
+
+/* Make sure select elements fit in widgets. */
+
+.widget select {
+    max-width: 100%;
+}
+
+.widget-area {
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+.widget-area:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 1em;
+    background-color: @primary-color;
+}
+
+.widget-title {
+    font-size: 18px;
+    font-size: 1rem;
+    margin-bottom: 0.6em;
+}
+
+.widget ul,
+.widget ol {
+    margin: 0;
+    list-style-type: none;
+    padding: 0 0 0 0.3em;
+}
+
+@media @midwidth {
+    .widget {
+        float: left;
+        width: 256px;
+        width: 16rem;
+    }
+}
+
+@media @fullscreen {
+    .widget {}
+    .home .widget-area {
+        font-size: 85%;
+        width: auto;
+    }
+    .home .widget-area:before {
+        content: none;
+    }
+    .home .widget {
+        background-color: transparent;
+        padding: 0;
+        margin: 2em 0 0 0;
+    }
+    .home .widget:first-of-type {
+        margin-top: 0;
+    }
+}
+
+// Specific Widgets
+.widget_pages .children,
+.widget_nav_menu .sub-menu {
+    padding-bottom: 0.5em;
+}
+
+input[type="search"] {
+    width: 65%;
+}
+.widget_search .search-submit {
+    width: 30%;
+    padding: 0.5em 0;
+}
+
+/* Calendar widget */
+
+.widget_calendar caption {
+    padding: .5em 0;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: left;
+}
+
+.widget_calendar thead {
+    background: @primary-color;
+    color: #fff;
+}
+
+.widget_calendar thead th {
+    border-bottom-width: 2px;
+}
+
+.widget_calendar td {
+    padding: .2em;
+    font-size: .8em;
+    text-align: center;
+    background: #d6d6d6;
+    border: 3px solid white;
+}
+
+.widget_calendar th {
+    border: none;
+}
+
+.widget_calendar .pad {
+    background: #eaeaea;
+}
+
+.widget_nav_menu a,
+.widget_pages a {
+    width: 100%;
+    display: block;
+    border-bottom: 1px @primary-color solid;
+    padding-bottom: 0.5em;
+}
+
+.widget_nav_menu a:hover,
+.widget_pages a:hover {
+    background-color: @accent-one;
+    color: white;
+    text-decoration: none;
+    padding-left: 0.5em;
+}
+
+.widget_rss li {
+    margin-bottom: 1em;
+}
+.widget li a.rsswidget {
+    padding-right: .5em;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+.rss-date,
+.widget_rss cite {
+    font-size: 1em;
+}
+
+.rssSummary {
+    padding: .5em 0;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+

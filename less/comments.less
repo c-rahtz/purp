@@ -1,0 +1,101 @@
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+.comments-area {
+    margin-top: 4em;
+}
+
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+.comments-title {
+    font-size: 19px;
+    font-size: 1.1875rem;
+}
+
+.comments-title::before {
+    display: block;
+    content: "";
+    width: 25%;
+    border-bottom: solid 2px @primary-color;
+    margin-bottom: 0.75em;
+}
+
+.comment-list,
+.comment-list ol {
+    list-style-type: none;
+}
+
+.comment,
+.pingback {
+    // border-bottom: 1px solid @primary-color;
+    margin-bottom: 2.5em;
+}
+
+.comment-list .avatar.photo {
+    position: absolute;
+    width: 48px;
+    height: auto;
+    left: -56px;
+    top: 3px;
+}
+
+.comment-list .comment-content {
+    clear: left;
+    margin-left: 56px;
+    margin-top: 10px;
+}
+
+.comment-list .reply {
+    text-align: right;
+}
+
+.comment-list .reply a {
+    color: white;
+    text-decoration: none;
+    background-color: @accent-one;
+    padding: 0.5em 1.5em;
+}
+
+.comment-author .fn,
+.comment-author .fn a {
+    color: @primary-color
+}
+
+.comment-metadata time {
+    font-size: 85%;
+}
+
+.comment-meta {
+    position: relative;
+    margin-left: 56px;
+}
+
+.bypostauthor {
+    box-shadow: 0px -1px 9px 7px #ddd;
+    padding: 1em;
+    margin-right: -1em;
+    margin-left: 0;
+}
+
+.comment-respond {
+    margin: 1em 0 1.5em 3.5em;
+}
+
+#commentform::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+@media @midwidth {
+    .comment-form .form-submit {
+        float: right;
+    }
+}

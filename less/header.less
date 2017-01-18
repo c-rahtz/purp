@@ -1,0 +1,162 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.site-header {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.identity-wrap {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    // margin-left: 5em;
+    background-color: lightgrey;
+    background-size: cover;
+}
+
+.site-logo {
+    position: relative;
+    flex: 0 1 3em;
+    margin-top: 0.4em;
+    display: none;
+}
+
+// .home .site-logo {
+// }
+.site-logo a {
+    position: absolute;
+    z-index: 10;
+    top: 1.2em;
+    left: 1em;
+    display: block;
+    width: 2em;
+    height: 2em;
+    background: white;
+    border: 2px solid black;
+    color: black;
+    text-decoration: none;
+}
+
+.site-logo.single a {
+    top: 0.4em;
+}
+
+.site-logo a:hover,
+.site-logo a:focus {
+    outline: 2px solid black;
+}
+
+.site-logo.single a:hover,
+.site-logo.single a:focus {
+    outline: 2px solid white;
+}
+
+.site-firstletter {
+    font-family: 'Courgette', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+.site-logo a:hover .site-firstletter,
+.site-logo a:focus .site-firstletter {
+    background: black;
+    color: white;
+}
+
+.site-branding {
+    flex: 0 1 auto;
+    text-align: left;
+    // margin-left: 0.8em;
+}
+
+.site-title {
+    margin: 0.4em 0 0;
+    font-family: 'baskerville-urw', Times, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.3em;
+    color: @primary-color;
+    word-break: break-word;
+    display: inline-block;
+    background-color: white;
+    padding: 0.1em 0.4em;
+}
+
+.site-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.site-title a:hover,
+.site-title a:focus {
+    color: #7d7d7d;
+}
+
+.site-description {
+    margin: 0.6em 0 1em;
+    font-size: 90%;
+    line-height: 135%;
+    color: white;
+    background-color: @primary-color;
+    padding: 0.2em 1em;
+}
+
+@media @midwidth {
+    // .identity-wrap {
+    //     margin-left: 2%;
+    // }
+    .site-title {
+        font-size: 2.4em;
+    }
+    .site-description {
+        font-size: 105%;
+        line-height: 135%;
+        margin-top: 0;
+    }
+    .site-logo {
+        display: block;
+    }
+    .home .site-logo {
+        display: none;
+    }
+}
+
+@media @fullscreen {
+    // .identity-wrap {
+    //     margin-left: 1.2em;
+    // }
+}
+
+@media @widescreen {
+    // .identity-wrap {
+    //     margin-left: 5em;
+    // }
+    .home .site-logo {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    // .site-branding {
+    //     text-align: left;
+    // }
+    // .site-title {
+    //     font-size: 2em;
+    //     margin-top: 1em;
+    // }
+    // .site-description {
+    //     font-size: 90%;
+    //     margin-top: 0.6em;
+    // }
+    // .site-title::after {
+    //     margin: .3em 0 0;
+    //     width: 2.4em;
+    // }
+}

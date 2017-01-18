@@ -1,0 +1,189 @@
+/*--------------------------------------------------------------
+## Other Navigation
+--------------------------------------------------------------*/
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation,
+.site-main .paging-navigation {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+}
+
+.site-main .comment-navigation a,
+.site-main .posts-navigation a,
+.site-main .post-navigation a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-main .post-navigation {
+    margin-top: 3em;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous,
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    border-right: 4px solid transparent;
+}
+
+.comment-navigation .nav-previous a,
+.posts-navigation .nav-previous a,
+.post-navigation .nav-previous a {
+    display: block;
+    background-color: @accent-one;
+    padding: 0.4em 0.5em 0.6em;
+    font-size: 90%;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.continue-reading a {
+    display: inline-block;
+    background-color: @accent-one;
+    color: white;
+    padding: 0.1em 0.7em;
+    margin-bottom: 1em;
+    text-decoration: none;
+    font-size: 90%;
+}
+
+.comment-navigation .nav-next a,
+.posts-navigation .nav-next a,
+.post-navigation .nav-next a {
+    display: block;
+    background-color: @accent-one;
+    padding: 0.4em 0.5em 0.6em;
+    font-size: 90%;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.posts-navigation .nav-previous a::before,
+.post-navigation .nav-previous a::before {
+    content: "\00ab";
+    color: white;
+    font-size: 1.3em;
+    margin-right: 0.2em;
+    font-weight: 600;
+}
+
+.posts-navigation .nav-next a::after,
+.post-navigation .nav-next a::after {
+    content: "\00bb";
+    color: white;
+    font-size: 1.3em;
+    margin-left: 0.2em;
+    font-weight: 600;
+}
+
+// Paging navigation
+.paging-navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.paging-navigation ul li {
+    margin-right: 1em;
+}
+
+.paging-navigation ul li:first-of-type,
+.paging-navigation ul li:last-of-type {
+    margin-right: 0;
+    width: 100%;
+}
+
+.paging-navigation a {
+    display: inline-block;
+    background-color: #6a0f97;
+    color: white;
+    padding: 0.4em 1.1em 0.7em;
+    margin-bottom: 1em;
+    text-decoration: none;
+    font-size: 120%;
+}
+
+.paging-navigation .page-numbers.current {
+    display: inline-block;
+    color: @accent-one;
+    padding: 0.3em 0.8em 0.4em;
+    margin-bottom: 1em;
+    text-decoration: none;
+    font-size: 120%;
+    border: solid 0.3em @accent-one;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.paging-navigation a.prev {
+    padding: 0.4em 2em 0.4em 1.5em;
+    font-size: 90%;
+    width: 100%;
+    text-align: center;
+}
+
+.paging-navigation a.next {
+    padding: 0.4em 2em;
+    font-size: 90%;
+    width: 100%;
+    text-align: center;
+}
+
+@media @midwidth {
+    .posts-navigation .nav-links,
+    .post-navigation .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .comment-navigation .nav-previous a,
+    .post-navigation .nav-previous a {
+        padding: 1em 2em;
+    }
+    .posts-navigation .nav-previous a {
+        padding: 1em 2em 1em 1.5em;
+    }
+    .comment-navigation .nav-next a,
+    .posts-navigation .nav-next a,
+    .post-navigation .nav-next a {
+        padding: 1em 2em;
+    }
+    .paging-navigation ul {
+        max-width: 33em;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .paging-navigation ul li:first-of-type,
+    .paging-navigation ul li:last-of-type {
+        width: auto;
+    }
+    .paging-navigation ul li:first-of-type {
+        margin-right: 1em;
+    }
+    .paging-navigation a.prev {
+        padding: 1em 2em 1em 1.5em;
+        font-size: 90%;
+        width: auto;
+    }
+    .paging-navigation a.next {
+        padding: 1em 2em;
+        font-size: 90%;
+        width: auto;
+    }
+}
+
+@media @fullscreen {
+    .posts-navigation .nav-previous,
+    .paging-navigation ul {
+        margin-left: 25%;
+    }
+}
