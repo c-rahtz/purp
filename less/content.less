@@ -51,8 +51,8 @@
     margin: 0;
 }
 
-.entry-footer {
-
+.entry-footer span {
+    display: block;
 }
 
 .entry-footer .edit-link {
@@ -66,6 +66,17 @@
     .page-title {
         text-align: center;
     }
+    .entry-footer span {
+        display: inline-block;
+        margin-right: 0.4em;
+    }
+
+    .entry-footer .cat-links::after {
+        content: "|";
+        display: inline-block;
+        margin-left: 0.4em;
+    }
+
 }
 
 @media @fullscreen {

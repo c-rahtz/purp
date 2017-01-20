@@ -13,12 +13,12 @@
 	<header class="page-header">
 		<h1 class="page-title">
 			<?php 
-			if ( is_404() ) { esc_html_e( 'Page not available', 'popperscores' );
+			if ( is_404() ) { esc_html_e( 'Page not available', 'purp' );
 			} else if ( is_search() ) {
 				/* translators: %s = search query */
-				printf( esc_html__( 'Nothing found for &ldquo;%s&rdquo;', 'popperscores'), '<em>' . get_search_query() . '</em>' );
+				printf( esc_html__( 'Nothing found for &ldquo;%s&rdquo;', 'purp'), '<em>' . get_search_query() . '</em>' );
 			} else {
-				esc_html_e( 'Nothing Found', 'popperscores' );
+				esc_html_e( 'Nothing Found', 'purp' );
 			}
 			?>
 		</h1>
@@ -27,21 +27,21 @@
 	<div class="page-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'popperscores' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'purp' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'popperscores' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'purp' ); ?></p>
 			<?php get_search_form(); ?>
 		
 		<?php elseif ( is_404() ) : ?>
 
-			<p><?php esc_html_e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'popperscores' ); ?></p>
+			<p><?php esc_html_e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'purp' ); ?></p>
 			<?php get_search_form(); ?>
 			
 		<?php else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'popperscores' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'purp' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>
@@ -50,7 +50,7 @@
 	<?php
     if ( is_404() || is_search() ) {
     ?>
-		<h1 class="page-title secondary-title"><?php esc_html_e( 'Most recent posts:', 'popperscores' ); ?></h1>
+		<h1 class="page-title secondary-title"><?php esc_html_e( 'Most recent posts:', 'purp' ); ?></h1>
 		<?php
 		// Get the 6 latest posts
 		$args = array(
