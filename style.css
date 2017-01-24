@@ -1158,6 +1158,7 @@ input[type="search"] {
           align-items: flex-start;
   background-color: lightgrey;
   background-size: cover;
+  position: relative;
 }
 .site-logo {
   position: relative;
@@ -1208,6 +1209,7 @@ input[type="search"] {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
   text-align: left;
+  z-index: 1;
 }
 .site-title {
   margin: 0.4em 0 0;
@@ -1236,6 +1238,14 @@ input[type="search"] {
   color: white;
   background-color: #32004b;
   padding: 0.2em 1em;
+}
+#header-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 @media only screen and (min-width: 40em) {
   .site-title {

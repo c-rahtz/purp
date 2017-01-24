@@ -47,7 +47,7 @@
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				<div class="contact">
-					<p><a href="/contact">Contact Me</a></p>
+					<p><a href="http://rahtz.net/blog/contact">Contact Me</a></p>
 		            <?php if (has_custom_logo()) the_custom_logo();?>
 				</div>
 			</nav><!-- #site-navigation -->
