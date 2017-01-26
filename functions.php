@@ -133,12 +133,12 @@ add_action( 'wp_enqueue_scripts', 'purp_scripts' );
 
 // adding inline function to call typekit load
 // adapted from here: https://gist.github.com/FernE97/5581174
-//function purp_typekit_inline() {
-//    if ( wp_script_is( 'purp-typekit', 'done' ) ) {
-//        echo '<script>try{Typekit.load();}catch(e){}</script>';
-//    }
-// }
-// add_action('wp_head', 'purp_typekit_inline');
+function purp_typekit_inline() {
+   if ( wp_script_is( 'purp-typekit', 'done' ) ) {
+       echo '<script>try{Typekit.load();}catch(e){}</script>';
+   }
+}
+add_action('wp_head', 'purp_typekit_inline');
 
 
 /**
