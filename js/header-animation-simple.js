@@ -7,7 +7,7 @@
         scene = new THREE.Scene();
         // scene.background = new THREE.Color( 0xffffff);
         camera = new THREE.PerspectiveCamera(75, canvas.offsetWidth / canvas.offsetHeight, 1, 10000);
-        camera.position.z = 1000;
+        // camera.position.z = 100;
         // camera.position.x = 200;
         // camera.rotation.y = -5;
 
