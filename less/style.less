@@ -435,7 +435,18 @@ html {
 
 body {
     background: #fff;
+    background-image: url('./img/subtle-pattern/cream_dust.png');
+    background-size: 50px 50px;
     /* Fallback for when there is no custom background color defined. */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    body {
+        background-image: url('./img/subtle-pattern/cream_dust_@2x.png');
+    }
 }
 
 blockquote:before,
@@ -529,13 +540,11 @@ th {
 
 @import "forms.less";
 
-
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 
 @import "navigation.less";
-
 
 /*--------------------------------------------------------------
 ## Links
@@ -543,20 +552,17 @@ th {
 
 @import "links.less";
 
-
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 
 @import "menus.less";
 
-
 /*--------------------------------------------------------------
 ## Other Navigation
 --------------------------------------------------------------*/
 
 @import "other-navigation.less";
-
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -663,7 +669,6 @@ th {
 
 @import "widgets.less";
 
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -676,13 +681,11 @@ th {
 
 @import "content.less";
 
-
 /*--------------------------------------------------------------
 # Global
 --------------------------------------------------------------*/
 
 @import "global.less";
-
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -690,13 +693,11 @@ th {
 
 @import "posts-and-pages.less";
 
-
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
 
 @import "comments.less";
-
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -768,6 +769,7 @@ object {
     text-align: center;
 }
 
+
 /*--------------------------------------------------------------
 ## Images
 --------------------------------------------------------------*/
@@ -792,13 +794,14 @@ object {
     outline: dotted 2px @accent-one;
 }
 
-
 @media @midwidth {
     .posts-home .featured-image {
         margin: 0 0 1em;
         text-align: center;
     }
 }
+
+
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
@@ -851,6 +854,7 @@ object {
     font-size: 75%;
     line-height: 1.2em;
 }
+
 
 /*--------------------------------------------------------------
 # Footer
