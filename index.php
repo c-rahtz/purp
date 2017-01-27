@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php if(is_home()) echo 'home'; ?>">
+	<div id="primary" class="content-area <?php if(is_home()) echo 'posts-home'; ?>">
 		<main id="main" class="site-main" role="main">
 
 		<?php
