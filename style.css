@@ -1199,7 +1199,6 @@ input[type="search"] {
   outline: 2px solid white;
 }
 .site-firstletter {
-  font-family: 'Courgette', sans-serif;
   font-size: 1.5em;
   font-weight: 700;
   text-align: center;
@@ -1301,6 +1300,7 @@ input[type="search"] {
 }
 .entry-content {
   width: 98%;
+  position: relative;
 }
 .page-title {
   text-align: left;
@@ -1368,6 +1368,9 @@ input[type="search"] {
     padding-right: 2%;
     box-sizing: border-box;
   }
+  .page .entry-header {
+    padding-right: 0;
+  }
   .posts-home .entry-content {
     width: 74%;
     float: right;
@@ -1378,6 +1381,9 @@ input[type="search"] {
     float: none;
     box-sizing: border-box;
     max-width: 48em;
+  }
+  .page .entry-content {
+    padding-left: 0;
   }
 }
 /*--------------------------------------------------------------

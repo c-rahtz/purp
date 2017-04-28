@@ -108,7 +108,7 @@ add_action( 'widgets_init', 'purp_widgets_init' );
 function purp_scripts() {
 	wp_enqueue_style( 'purp-style', get_stylesheet_uri() );
 
-    wp_enqueue_script('purp-typekit', '//use.typekit.net/qgr2ggk.js');
+    // wp_enqueue_script('purp-typekit', '//use.typekit.net/qgr2ggk.js');
     // wp_enqueue_style('purp-google-fonts', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900i,900%7CCourgette');
 
 	wp_enqueue_script( 'purp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -134,9 +134,20 @@ add_action( 'wp_enqueue_scripts', 'purp_scripts' );
 // adding inline function to call typekit load
 // adapted from here: https://gist.github.com/FernE97/5581174
 function purp_typekit_inline() {
-   if ( wp_script_is( 'purp-typekit', 'done' ) ) {
-       echo '<script>try{Typekit.load();}catch(e){}</script>';
-   }
+   // if ( wp_script_is( 'purp-typekit', 'done' ) ) {
+   //     echo '<script>try{Typekit.load();}catch(e){}</script>';
+   // }
+	// advanced typekit embed code, quotations fixed
+	echo "<script>
+		  (function(d) {
+		    var config = {
+		      kitId: 'qgr2ggk',
+		      scriptTimeout: 3000,
+		      async: true
+		    },
+		    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,'')+' wf-inactive';},config.scriptTimeout),tk=d.createElement('script'),f=false,s=d.getElementsByTagName('script')[0],a;h.className+=' wf-loading';tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!='complete'&&a!='loaded')return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		  })(document);
+		</script>";
 }
 add_action('wp_head', 'purp_typekit_inline');
 
